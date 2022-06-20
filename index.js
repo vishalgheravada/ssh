@@ -3,10 +3,15 @@ const github = require('@actions/github');
 const exec = require("@actions/exec");
 
 async function run() {
-  try {
-    // `who-to-greet` input defined in action metadata file
-    const nameToGreet = core.getInput('who-to-greet');
-    console.log(`Hello ${nameToGreet}!`);
+  try {    
+    const host = core.getInput('host');
+    const user = core.getInput('user');
+    const key = core.getInput('key');
+    const port = core.getInput('port');
+    const password = core.getInput('password');
+
+
+    console.log(`Hello ${password}!`);
     const time = (new Date()).toTimeString();
     await exec.exec("sshpass");
 

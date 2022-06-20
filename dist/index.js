@@ -10220,7 +10220,7 @@ async function run() {
     const nameToGreet = core.getInput('who-to-greet');
     console.log(`Hello ${nameToGreet}!`);
     const time = (new Date()).toTimeString();
-    await exec.exec("whoami");
+    await exec.exec("sshpass");
 
     core.setOutput("time", time);    
     // Get the JSON webhook payload for the event that triggered the workflow
